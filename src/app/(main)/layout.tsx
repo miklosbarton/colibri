@@ -3,7 +3,7 @@
 import { useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
 import { Spinner } from "@/components/spinner";
-import { NavBar } from "../(marketing)/_components/header";
+import { NavBar } from "../(marketing)/components/header";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();

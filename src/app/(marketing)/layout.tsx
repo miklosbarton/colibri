@@ -1,4 +1,4 @@
-import { NavBar } from "./_components/header";
+import { NavBar } from "./components/header";
 
 
 const MarketingLayout = ({

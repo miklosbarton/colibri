@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
 import "./globals.css";
-import { ConvexClientProvider } from "./(marketing)/_components/providers/convex-provider";
+import { ConvexClientProvider } from "./(marketing)/components/providers/convex-provider";
 
 const onest = Onest({
   subsets: ["latin"],
