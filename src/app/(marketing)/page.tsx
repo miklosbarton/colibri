@@ -1,14 +1,74 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const MarketingPage = () => {
-  return (
-    <div className="min-h-full flex flex-col">
-      <div className="flex flex-col items-center justify-center md:justify-center text-center gap-y-8 flex-1 px-6 pb-10">
-        MarketingPage
-      </div>
-    </div>
-  );
+    return (
+        <main className="min-h-full flex flex-col">
+            <section className="px-12 py-40">
+                <div className="max-w-screen-2xl mx-auto">
+                    <div>
+                        <h1 className="text-7xl font-semibold mb-6 max-w-xl">Leading the Human-Centric AI Revolution</h1>
+                        <p className="text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">Colibri has created Culture-as-a-Service (CaaS), a new category that provides a proactive, systemic, real-time diagnostic of an organisation’s cultural health, making it resilient and AI-ready.</p>
+                        <Button size="lg">Join the waitlist</Button>
+                    </div>
+                </div>
+            </section>
+             <Separator />
+            <section className="px-12 py-40">
+                <div className="max-w-screen-2xl mx-auto flex flex-col items-center text-center">
+                    <h2 className="text-5xl font-semibold mb-8">About Our Company</h2>
+                    <p className="text-xl text-muted-foreground max-w-xl leading-relaxed mb-8">Our No-Code model offers significant economic advantages, radically minimizing specialized personnel costs and accelerating time-to-market, which directly impacts revenue generation and investor value.</p>
+                    <Button size="lg">Learn more</Button>
+                </div>
+            </section>
+            <Separator />
+            <section className="px-12 py-40">
+                <div className="max-w-screen-2xl mx-auto">
+                    <div></div>
+                    <div>
+                        <h2 className="text-5xl font-semibold mb-8">Our TEAL Organisational Structure</h2>
+                        <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">Our internal structure is built around seven key teams or domains that mirror our strategic priorities and foster a culture of distributed responsibility and continuous learning.</p>
+                    </div>
+                </div>
+            </section>
+             <Separator />
+            <section className="px-12 py-40">
+                <div className="max-w-screen-2xl mx-auto flex gap-20">
+                    <div className="basis-1/3">
+                        <h2 className="text-5xl font-semibold">An Unassailable Advantage</h2>
+                    </div>
+                    <div className="grid grid-cols-2 gap-20">
+                        <div>
+                            <h3 className="text-2xl font-semibold mb-4">Elite Consulting Rigor</h3>
+                            <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">We provide deep, systemic analysis of organizational health, moving beyond simple metrics to understand root causes.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-semibold mb-4">Specialised ONA Power</h3>
+                            <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">We productise the complex science of organisational network analysis to reveal hidden collaboration dynamics.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-semibold mb-4">Humane AI Governance</h3>
+                            <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">We transform AI ethics and compliance into a core strategic asset.</p>
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-semibold mb-4">Research Hub Flywheel</h3>
+                            <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">Our "Nest" creates a self-reinforcing cycle of insight and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <Separator />
+            <section className="px-12 py-40">
+                <div className="max-w-screen-2xl mx-auto">
+                    <h2 className="text-5xl font-semibold mb-4">Empowering People. Transforming Organizations.</h2>
+                    <p className="text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">Join the waitlist for early access to Colibri’s platform and lead the shift from UX to AIX®.</p>
+                    <Button size="lg">Join the waitlist today</Button>
+                </div>
+            </section>
+
+        </main>
+    );
 };
 
 export default MarketingPage;
