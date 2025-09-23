@@ -1,6 +1,8 @@
 import Footer from "./components/footer";
 import { NavBar } from "./components/header";
 
+// npx convex deploy --cmd 'npm run build'
+
 const MarketingLayout = ({
     children
 }: {
