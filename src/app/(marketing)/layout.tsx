@@ -1,5 +1,5 @@
+import Footer from "./components/footer";
 import { NavBar } from "./components/header";
-
 
 const MarketingLayout = ({
     children
@@ -12,6 +12,7 @@ const MarketingLayout = ({
             <main className="h-full pt-40">
                 {children}
             </main>
+            <Footer/>
         </div>
     )
 }

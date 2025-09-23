@@ -6,17 +6,26 @@ import { SignInButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Spinner } from "@/components/spinner";
+import { mainRoutes } from "../_data/routes";
 
 export const NavBar = () => {
   const { isAuthenticated, isLoading } = useConvexAuth();
-  
+
   return (
     <div
       className={cn(
         "z-50 bg-background fixed top-0 flex items-center w-full p-6 border-b shadow-sm",
       )}
     >
-      
+      <div><Link href="/">Colibri</Link></div>
+      <div className="flex gap-2 items-center ml-10">
+        {
+          mainRoutes.map((route, idx) => (
+            <Button variant="ghost" key={idx}><Link href={route.url} className="text-secondary-foreground font-medium hover:text-primary">{route.title}</Link></Button>
+          ))
+        }
+      </div>
+
       <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
         {isLoading && <Spinner />}
         {!isAuthenticated && !isLoading && (

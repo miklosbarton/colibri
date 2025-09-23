@@ -3,10 +3,16 @@
 import { useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
 import { Spinner } from "@/components/spinner";
-import { NavBar } from "../(marketing)/components/header";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useConvexAuth();
+  const { isSignedIn, user } = useUser();
+
+  if (!isSignedIn) return <p>Loading...</p>;
 
   if (isLoading) {
     return (
@@ -23,12 +29,12 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="h-full flex bg-zinc-50 dark:bg-zinc-950">
       <div className="h-[80px] md:pl-56 fixed inset-y-0 w-full z-50">
-        <NavBar/>
+        <Button variant="ghost" size="sm" asChild>
+          <Link href="/dashboard">{user.fullName} {user.emailAddresses[0].emailAddress}</Link>
+        </Button>
+        <UserButton afterSignOutUrl="/" />
       </div>
-      <div className="hidden md:flex h-full w-56 flex-col fixed inset-y-0 z-50">
-        hello
-      </div>
-      <main className="md:pl-56 pt-[80px] flex-1 h-full overflow-auto">{children}</main>       
+      <main className="md:pl-56 pt-[80px] flex-1 h-full overflow-auto">{children}</main>
     </div>
   );
 };
