@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="text-sm text-muted-foreground py-8 border-t">
-            © 2025 All Rights Reserved.
+                © 2025 All Rights Reserved.
             </div>
         </div>
 

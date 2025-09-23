@@ -18,7 +18,7 @@ const MarketingPage = () => {
                     </div>
                     <div className="flex-1"><img src="/assets/images/1.jpg" /></div>
                 </div>
-                
+
             </section>
             <Separator />
             <section className="px-12 space-y-20 py-40 flex flex-col items-center">
@@ -62,7 +62,7 @@ const MarketingPage = () => {
                             <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">We transform AI ethics and compliance into a core strategic asset.</p>
                         </div>
                         <div>
-                            <div className="mb-8 rounded-xl border size-16 flex items-center justify-center"><ChartBarIncreasing/></div>
+                            <div className="mb-8 rounded-xl border size-16 flex items-center justify-center"><ChartBarIncreasing /></div>
                             <h3 className="text-2xl font-semibold mb-4">Research Hub Flywheel</h3>
                             <p className="text-xl text-muted-foreground mb-4 max-w-xl leading-relaxed">Our Nest creates a self-reinforcing cycle of insight and innovation.</p>
                         </div>
@@ -71,8 +71,8 @@ const MarketingPage = () => {
             </section>
 
             <Separator />
-            <CTA/>
-            
+            <CTA />
+
 
         </main>
     );

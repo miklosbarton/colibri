@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className={onest.variable}>
       <body>
         <ConvexClientProvider>
-        {children}
+          {children}
         </ConvexClientProvider>
       </body>
     </html>
